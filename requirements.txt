@@ -1,0 +1,4 @@
+qiskit==0.26.2
+matplotlib==3.4.1
+Pillow==8.2.0 
+jupyter==1.0.0
