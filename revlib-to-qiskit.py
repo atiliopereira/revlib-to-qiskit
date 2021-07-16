@@ -8,7 +8,7 @@ def get_registers_sequence(instruction, registers):
     Read a Revlib instruction and get positions of the registers in the instruction.
     :param instruction: RevLib format instruction string
     :param registers: list of all registers of the Qiskit circuit
-    :return: list of registers positions in the circuit that involved in the instruction
+    :returns a list of registers positions in the circuit that involved in the instruction
 
     """
     result = []
@@ -24,7 +24,7 @@ def read_circuit(file):
     """
     Read a Revlib circuit file and create a Qiskit circuit objetc
     :param file: Revlib circuit file
-    :returno: Qiskit circuit object 
+    :returns a Qiskit circuit object 
 
     """
     with open(file, mode="r") as file:
