@@ -78,11 +78,10 @@ def read_circuit(file):
 
             #Peres Gates
             elif "p" in instruction[0]:
-                cont = 1
-                while cont < len(instruction[1:]):
+                for cont in (i+1 for i in instruction[1:]):
+                    print(get_registers_sequence(instruction, registers)[:-cont], get_registers_sequence(instruction, registers)[-cont])
                     circ.mcx(control_qubits=get_registers_sequence(instruction, registers)[:-cont],
                             target_qubit=get_registers_sequence(instruction, registers)[-cont])
-                    cont += 1
 
             #Controlled-V
             elif "v" == instruction[0]:
